@@ -1,7 +1,7 @@
 <template>
-    <a-layout style="min-height: 100%" id="components-layout-demo-responsive">
+    <a-layout id="components-layout-demo-responsive" style="min-height: 100%">
         <a-layout-sider
-            style="position: fixed;height: 100%"
+            style="position: fixed; height: 100%"
             breakpoint="lg"
             collapsed-width="0"
             @collapse="onCollapse"
@@ -32,6 +32,9 @@
             <a-layout-content :style="{ margin: '24px 16px 0' }">
                 <div :style="{ padding: '24px', background: '#fff', minHeight: '360px' }">
                     content
+                    <a-button @click="changeB">测试</a-button>
+                    <a-button @click="changeA">测试a</a-button>
+                    <a-button @click="stayB">测试stay</a-button>
                 </div>
             </a-layout-content>
             <a-layout-content :style="{ margin: '24px 16px 0' }">
@@ -51,15 +54,18 @@
     </a-layout>
 </template>
 
-<script>
-import { defineComponent } from '@vue/composition-api';
+<script lang="ts">
+import { defineComponent, ref } from 'vue';
 
 export default defineComponent({
+    setup() {
+        return {};
+    },
     methods: {
-        onCollapse(collapsed, type) {
+        onCollapse(collapsed: unknown, type: unknown) {
             window.console.log(collapsed, type);
         },
-        onBreakpoint(broken) {
+        onBreakpoint(broken: unknown) {
             window.console.log(broken);
         },
     },
