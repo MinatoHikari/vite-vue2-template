@@ -1,7 +1,7 @@
 module.exports = {
     extends: '@antfu',
     rules: {
-        '@typescript-eslint/indent': ['warn', 4],
+        '@typescript-eslint/indent': 'off',
         '@typescript-eslint/semi': 'off',
         '@typescript-eslint/member-delimiter-style': 'off',
         'semi': 'off',
@@ -10,4 +10,4 @@ module.exports = {
         'vue/html-self-closing': 'off',
         'vue/singleline-html-element-content-newline': 'off',
     },
-}
+};

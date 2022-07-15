@@ -17,9 +17,9 @@
                     class="mr-5 font-semibold cursor-pointer"
                     :class="{
                         'text-green-500 hover:green-500 dark:text-green-500 dark:hover:text-green-500 underline':
-                            route.name === currentRoute.name,
+                            currentRoute ? route.name === currentRoute.name : false,
                         'hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200':
-                            route.name !== currentRoute.name,
+                            currentRoute ? route.name !== currentRoute.name : false,
                     }"
                     :to="{ name: route.name }"
                 >
@@ -40,7 +40,7 @@
                 </a>
                 <button
                     class="flex items-center justify-center w-9 h-9 focus:outline-none"
-                    @click="toggle"
+                    @click="() => toggle()"
                 >
                     <MdiWhiteBalanceSunny v-if="isDark" class="text-yellow-500" />
                     <MdiMoonWaningCrescent v-else class="text-gray-800" />

@@ -5,7 +5,8 @@
         "dev": "vite --force",
         "build": "vite build",
         "lint": "eslint \"**/*.{vue,ts,js}\"",
-        "lint:fix": "eslint \"**/*.{vue,ts,js}\" --fix"
+        "lint:fix": "eslint \"**/*.{vue,ts,js}\" --fix",
+        "typecheck": "vue-tsc --noEmit"
     },
     "dependencies": {
         "@vueuse/core": "^8.9.3",
@@ -32,6 +33,7 @@
         "unplugin-vue-components": "^0.21.1",
         "vite": "^3.0.0",
         "vite-plugin-style-import": "^2.0.0",
-        "vue-template-compiler": "^2.7.6"
+        "vue-template-compiler": "^2.7.6",
+        "vue-tsc": "^0.38.5"
     }
 }
