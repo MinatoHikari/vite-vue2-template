@@ -1,6 +1,7 @@
 import path from 'path';
 import { defineConfig } from 'vite';
-import WindiCSS from 'vite-plugin-windicss';
+import Unocss from 'unocss/vite';
+import { presetAttributify, presetUno } from 'unocss';
 import Components from 'unplugin-vue-components/vite';
 import Icons from 'unplugin-icons/vite';
 import IconsResolver from 'unplugin-icons/resolver';
@@ -22,7 +23,15 @@ const config = defineConfig({
 
     plugins: [
         Vue2(),
-        WindiCSS(),
+        Unocss({
+            presets: [
+                presetAttributify({
+                    /* preset options */
+                }),
+                presetUno(),
+                // ...custom presets
+            ],
+        }),
         Components({
             resolvers: [
                 IconsResolver({
@@ -58,9 +67,6 @@ const config = defineConfig({
                 javascriptEnabled: true,
             },
         },
-    },
-    server: {
-        port: 3333,
     },
 });
 

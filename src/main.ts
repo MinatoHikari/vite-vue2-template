@@ -2,7 +2,7 @@ import Vue from 'vue';
 import { initAnt } from '@/ant';
 import App from '@/App.vue';
 
-import 'windi.css';
+import 'uno.css';
 import router from '@/router';
 
 Vue.config.productionTip = false;
