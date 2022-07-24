@@ -1,5 +1,5 @@
 module.exports = {
-    extends: '@antfu',
+    extends: ['@antfu', 'prettier'],
     rules: {
         '@typescript-eslint/indent': 'off',
         '@typescript-eslint/semi': 'off',

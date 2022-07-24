@@ -1,5 +1,6 @@
 {
     "private": true,
+    "packageManager": "pnpm@7.0.0",
     "scripts": {
         "postinstall": "husky install",
         "dev": "vite --force",
@@ -23,6 +24,7 @@
         "@vitejs/plugin-vue2-jsx": "^1.0.2",
         "consola": "^2.15.3",
         "eslint": "^8.20.0",
+        "eslint-config-prettier": "^8.5.0",
         "husky": "^7.0.4",
         "less": "^4.1.2",
         "less-loader": "^10.2.0",
