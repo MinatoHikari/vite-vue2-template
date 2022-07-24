@@ -8,6 +8,7 @@ import IconsResolver from 'unplugin-icons/resolver';
 import AutoImport from 'unplugin-auto-import/vite';
 import { createStyleImportPlugin } from 'vite-plugin-style-import';
 import Vue2 from '@vitejs/plugin-vue2';
+import vueJsx from '@vitejs/plugin-vue2-jsx';
 
 const config = defineConfig({
     resolve: {
@@ -23,6 +24,7 @@ const config = defineConfig({
 
     plugins: [
         Vue2(),
+        vueJsx({}),
         Unocss({
             presets: [
                 presetAttributify({
